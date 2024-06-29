@@ -72,3 +72,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### json-server
 
 json-server --watch ./src/db/data.json --port 3001
+
+### git json-server
+
+#
+
+1. 활용할 db.json을 작성한다.
+2. 작성환 db.json을 사용하기 위해 업로드할 github에 레지포트리를 만든다.
+3. gihub에 레지포트리에 업로드한다.
+4. https://my-json-server.typicode.com/github아이디/db가 있는 레지포트리
+
+5. json-server 설정이 완료되었다면
+
+6. 서버의 주소를 이용한다
+
+### git에서 Repositories의 이름 설정
+
+# Repositories를 본의의 id.githup.io로 정하는 경우
+
+package.json에 "homepage": "https://본인의 아이디.github.io"를 추가한다.
+
+# git에 여러 Repositories를 만들어 사용할 때
+
+package.json에 "homepage": "https://본인의 아이디.github.io/압로드 할 Repositories이름"
+
+### <BrowserRouter basename="/Repositories이름">
+
+BrowserRouter요소에 basename="/Repositories이름"으로 작성한다.
