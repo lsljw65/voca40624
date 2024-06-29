@@ -20,7 +20,9 @@ export default function Day() {
   //     });
   // }, [day]);
 
-  const words = useFetch(`http://localhost:3001/words?day=${day}`);
+  const words = useFetch(
+    `https://my-json-server.typicode.com/lsljw65/voca-json2/words?day=${day}`
+  );
   return (
     <div>
       <h2>Day {day}</h2>

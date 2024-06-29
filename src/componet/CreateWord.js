@@ -3,7 +3,9 @@ import useFetch from "../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 
 export default function CreateWord() {
-  const days = useFetch("http://localhost:3001/days");
+  const days = useFetch(
+    "https://my-json-server.typicode.com/lsljw65/voca-json2/days"
+  );
   const history = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   console.log(isLoading);
@@ -12,7 +14,7 @@ export default function CreateWord() {
     if (!isLoading) {
       setIsLoading(true);
       console.log(isLoading);
-      fetch(`http://localhost:3001/words/`, {
+      fetch(`https://my-json-server.typicode.com/lsljw65/voca-json2/words/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -9,16 +9,19 @@ export default function Word({ word: _word }) {
   function toggleDone() {
     // setIsDone(!isDone);
     console.log(word.id);
-    fetch(`http://localhost:3001/words/${word.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...word,
-        isDone: !isDone,
-      }),
-    }).then((res) => {
+    fetch(
+      `https://my-json-server.typicode.com/lsljw65/voca-json2/words/${word.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...word,
+          isDone: !isDone,
+        }),
+      }
+    ).then((res) => {
       if (res.ok) {
         setIsDone(!isDone);
       }
@@ -27,9 +30,12 @@ export default function Word({ word: _word }) {
 
   function del() {
     if (window.confirm("삭제하시겠습니까?")) {
-      fetch(`http://localhost:3001/words/${word.id}`, {
-        method: "DELETE",
-      }).then((res) => {
+      fetch(
+        `https://my-json-server.typicode.com/lsljw65/voca-json2/words/${word.id}`,
+        {
+          method: "DELETE",
+        }
+      ).then((res) => {
         if (res.ok) {
           setWord({ id: 0 });
         }

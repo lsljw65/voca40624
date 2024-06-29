@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 export default function DayList() {
   // const [days, setDays] = useState([]);
-  const days = useFetch("http://localhost:3001/days");
+  const days = useFetch(
+    "https://my-json-server.typicode.com/lsljw65/voca-json2/days"
+  );
   // useEffect(() => {
   //   fetch("http://localhost:3001/days")
   //     .then((res) => {
